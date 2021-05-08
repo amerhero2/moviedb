@@ -1,0 +1,13 @@
+<div>
+    <div class="loader" *ngIf="isLoading">Loading...</div>
+    <div class="cards-container" *ngIf="!isLoading">
+        <div *ngFor="let show of tvShows ; let i=index" (click)="openTvShowDetails(show)">
+            <div class="img__wrap">
+                <img class="img__img" src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" alt="{{show.original_name}}"/>
+                <div class="img__description_layer">
+                  <p class="img__description">{{show.original_name}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

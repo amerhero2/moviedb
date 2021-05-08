@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="toggle-buttons">
+        <a class="btn-toggle btn-movies" routerLink="/home/movies" [ngClass]="{ 'active' : tabValue == 1 }" (click)="toggleMovies()">MOVIES</a>
+        <a class="btn-toggle btn-tvshows" routerLink="/home/tvshows"  [ngClass]="{ 'active' : tabValue == 2 }" (click)="toggleTvShows()">TV SHOWS</a>
+    </div>
+    <input class="search" placeholder="Search here..." type="text" (input)="search($event.target.value)" [(ngModel)]="searchInput" >
+  </div>  
+
+  <router-outlet></router-outlet>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="loader" *ngIf="isLoading">Loading...</div>
+    <div class="wrapper" *ngIf="!isLoading">
+        <div class="heading">
+            <h1>{{details?.title | uppercase}}</h1>
+            <button class="btn" (click)="goBack()"><i class="fa fa-arrow-left"></i>  BACK</button>
+        </div>
+        <p class="genres">
+            <span *ngFor="let genre of details?.genres"> {{genre.name}} /</span>
+        </p>
+        <div class="main-content">
+            <div class="image-holder">
+                <img src="https://image.tmdb.org/t/p/w500/{{details?.poster_path}}" />
+            </div>
+            <div class="info">
+                <div class="description">
+                    <h2>{{aboutString}}</h2>
+                    <p>{{details?.overview}}</p>
+                </div>
+                <div class="info-lists">
+                    <div class="productionCompanies">
+                        <p class="info-heading"> PRODUCTION COMPANIES:</p>
+                        <p *ngFor="let productionCompany of details?.production_companies">{{productionCompany.name}}</p>
+
+                    </div>
+                    <div class="productionCountries">
+                        <p class="info-heading">PRODUCTION COUNTRIES:</p>
+                        <p *ngFor="let productionCountry of details?.production_countries">{{productionCountry.name}}</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

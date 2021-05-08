@@ -1,0 +1,13 @@
+<div>
+    <div class="loader" *ngIf="isLoading">Loading...</div>
+    <div class="cards-container" *ngIf="!isLoading">
+        <div *ngFor="let movie of movies ; let i=index" (click)="openMovieDetails(movie)">
+            <div class="img__wrap">
+                <img class="img__img" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" />
+                <div class="img__description_layer">
+                  <p class="img__description">{{movie.title}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

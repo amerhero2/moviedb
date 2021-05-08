@@ -1,0 +1,75 @@
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 25px;
+
+    .toggle-buttons{
+      height: 50px;
+      display: flex;
+
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:rgba(54, 53, 53, 0.76);
+      }
+
+
+      .btn-toggle{
+        height: 100%;
+        width: 100px;
+        background-color: #f5f5f5;
+        border:1px solid #009688;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    
+
+      .active, .btn-toggle:hover{
+        background-color: white;
+      }
+
+      .btn-movies{
+        border-radius: 35px 0px 0px 35px;
+
+      }
+
+      .btn-tvshows{
+        border-radius: 0px 35px 35px 0px;
+      }
+
+      
+    }
+  }
+
+  
+  .search-icon {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 14px;
+  }
+
+  .clear-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    cursor: pointer;
+  }
+  .search {
+    border: 1.5px solid #009688;
+    border-radius: 30px;
+    height: 45px;
+    margin-top: 20px;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+  }
+
+  .search:hover, .search:focus {
+    border: 1.5px solid #009688;
+    background-color: white;
+  }
