@@ -12,5 +12,6 @@ This project has implemented CI/CD via Vercel, so project can be easily run , ju
 If you want to run this project localy, you can do that by cloning a project from github , and then running following commands in the root folder of the project : 
   1. `npm install` 
   2. `ng serve`
+  3. Visit `http://localhost:4200`
 
 
