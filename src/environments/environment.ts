@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   moviesURL: 'https://api.themoviedb.org/3/discover/movie?page=5',
-  searchMoviesURL: 'https://api.themoviedb.org/3/search/movie',
+  searchMoviesURL: 'https://api.themoviedb.org/3/search/movie?query=',
   movieDetailsURL: 'https://api.themoviedb.org/3/movie/',
   tvShowsURL: 'https://api.themoviedb.org/3/tv/popular?page=2',
   searchTvShowsURL:'https://api.themoviedb.org/3/search/tv?query=',

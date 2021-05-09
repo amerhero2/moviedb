@@ -32,15 +32,15 @@ export class MoviesService {
   }
 
 
-  searchMovies(text){
-    this.http.get(environment.searchMoviesURL + '?query=' + text ).subscribe((movies:any) => {
+  searchMovies(searchText: string){
+    this.http.get(environment.searchMoviesURL + searchText ).subscribe((movies:any) => {
       this.allMovies = movies.results;
       this.moviesSubject.next([...this.allMovies]);
     })
   }
 
 
-  getMovieDetails(id){
+  getMovieDetails(id: number){
     this.http.get(environment.movieDetailsURL + id).subscribe((movie: Movie) => {
       this.movieDetailsSub.next({...movie});
     })
